@@ -12,6 +12,7 @@
     <li><a th:href="@{/user/dashboard}">Espace Utilisateur</a></li>
     <li><a th:href="@{/admin/dashboard}">Espace Administrateur</a></li>
 </ul>
+<!-- 注销按钮：必须使用 POST 请求（CSRF 保护） -->
 <div class="logout-section">
     <form th:action="@{/logout}" method="post">
         <button type="submit" class="btn-logout">Se déconnecter</button>

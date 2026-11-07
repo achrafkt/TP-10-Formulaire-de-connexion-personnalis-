@@ -9,6 +9,7 @@
 <p>Accessible aux rôles USER et ADMIN.</p>
 
 <!-- La déconnexion doit se faire en POST (protection CSRF de Spring Security) -->
+<!-- 注销必须使用 POST 请求（Spring Security 的 CSRF 保护） -->
 <form th:action="@{/logout}" method="post">
     <button type="submit">Déconnexion</button>
 </form>

@@ -63,6 +63,25 @@ Puis ouvrir http://localhost:8080/login
 | Déconnexion                             | Redirection vers `/login?logout=true`| ✅ 302 → `/login?logout=true` |
 | Accès à `/admin/dashboard` sans rôle    | Erreur 403 – Accès refusé            | ✅ 403 |
 
+## Captures d'écran
+
+### 1. Page de connexion personnalisée (`/login`)
+![Page de connexion](screenshots/01-login.png)
+
+### 2. Mauvais mot de passe (`/login?error=true`)
+![Erreur de connexion](screenshots/04-login-error.png)
+
+### 3. Connexion réussie → page d'accueil (`/home`)
+![Accueil](screenshots/02-home.png)
+
+### 4. Espace Administrateur (`/admin/dashboard`, connecté en `admin`)
+![Espace Administrateur](screenshots/03-admin-dashboard.png)
+
+### 5. Accès refusé (`/admin/dashboard`, connecté en `user`) → 403
+![403 Forbidden](screenshots/05-403-forbidden.png)
+
+## Tests automatiques
+
 Ces comportements sont aussi vérifiés automatiquement par `AuthFlowTest` :
 
 ```bash
